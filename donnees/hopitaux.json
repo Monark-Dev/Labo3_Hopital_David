@@ -1,34 +1,167 @@
 {
-    "patient" : [
-                    {"dossier":1, "nom":"Léger", "prénom":"Emile", "naissance":"26 mars 1917", "sexe":"M"},
-                    {"dossier":2, "nom":"Bernard", "prénom":"Marie", "naissance":"3 février 1946", "sexe":"F"},  
-                    {"dossier":3, "nom":"Chartrand", "prénom":"Guy", "naissance":"5 avril 1959 ", "sexe":"M"},  
-                    {"dossier":4, "nom":"Coté", "prénom":"André", "naissance":"2 septembre 1978", "sexe":"M"},  
-                    {"dossier":5, "nom":"Lavoie", "prénom":"Carole", "naissance":"4 novembre 1973", "sexe":"F"},  
-                    {"dossier":6, "nom":"Martin", "prénom":"Diane", "naissance":"2 decembre 1965", "sexe":"F"},  
-                    {"dossier":7, "nom":"Lacroix", "prénom":"Pauline", "naissance":"25 janvier 1956", "sexe":"F"},  
-                    {"dossier":8, "nom":"St-Jean", "prénom":"Arthur", "naissance":"7 octobre 1912", "sexe":"M"},  
-                    {"dossier":9, "nom":"Béchard", "prénom":"Marc", "naissance":"8 aout 1980", "sexe":"M"},  
-                    {"dossier":10, "nom":"Chartrand", "prénom":"Mario", "naissance":"23 juillet 1947", "sexe":"M"} 
-
-
-],
-
-    "hospitalisation" : [
-                    {"code_établissement":1234, "no_dossier_patient":5, "date_admission":"14-aout-00", "date_sortie":"14-aout-01", "spécialité":"médecine"},
-                    {"code_établissement":1234, "no_dossier_patient":10, "date_admission":"12-dec-92", "date_sortie":"12-déc.-92", "spécialité":"chirurgie"},
-                    {"code_établissement":2346, "no_dossier_patient":8, "date_admission":"03-mars-03", "date_sortie":"05-mars-03", "spécialité":"médecine"},
-                    {"code_établissement":2346, "no_dossier_patient":1, "date_admission":"11-nov.-97", "date_sortie":"12-nov.-97", "spécialité":"orthopédie"},
-                    {"code_établissement":2346, "no_dossier_patient":3, "date_admission":"12-avr.-95", "date_sortie":"30-avr-95", "spécialité":"médecine"},
-                    {"code_établissement":3980, "no_dossier_patient":5, "date_admission":"14-févr.-00", "date_sortie":"14-mars-00", "spécialité":"médecine"},
-                    {"code_établissement":3980, "no_dossier_patient":5, "date_admission":"01-janv.-01", "date_sortie":"01-févr.-01", "spécialité":"médecine"},
-                    {"code_établissement":3980, "no_dossier_patient":9, "date_admission":"03-avr.-95", "date_sortie":"08-avr.-95", "spécialité":"orthopédie"},
-                    {"code_établissement":3980, "no_dossier_patient":7, "date_admission":"27-nov.-99", "date_sortie":"04-déc.-99", "spécialité":"chirurgie"},
-                    {"code_établissement":3980, "no_dossier_patient":10, "date_admission":"28-avr.-97", "date_sortie":"05-mai-97", "spécialité":"chirurgie"},
-                    {"code_établissement":4177, "no_dossier_patient":3, "date_admission":"03-aout-01", "date_sortie":"05-déc.-01", "spécialité":"médecine"},
-                    {"code_établissement":4177, "no_dossier_patient":3, "date_admission":"02-févr.-02", "date_sortie":"23-févr-02", "spécialité":"orthopédie"},
-                    {"code_établissement":7306, "no_dossier_patient":2, "date_admission":"23-mai-98", "date_sortie":"27-mai-98", "spécialité":"orthopédie"}
-
+    "patient": [
+        {
+            "dossier": 1,
+            "nom": "Léger",
+            "prénom": "Emile",
+            "naissance": "26 mars 1917",
+            "sexe": "M"
+        },
+        {
+            "dossier": 2,
+            "nom": "Bernard",
+            "prénom": "Marie",
+            "naissance": "3 février 1946",
+            "sexe": "F"
+        },
+        {
+            "dossier": 3,
+            "nom": "Chartrand",
+            "prénom": "Guy",
+            "naissance": "5 avril 1959 ",
+            "sexe": "M"
+        },
+        {
+            "dossier": 4,
+            "nom": "Coté",
+            "prénom": "André",
+            "naissance": "2 septembre 1978",
+            "sexe": "M"
+        },
+        {
+            "dossier": 5,
+            "nom": "Lavoie",
+            "prénom": "Carole",
+            "naissance": "4 novembre 1973",
+            "sexe": "F"
+        },
+        {
+            "dossier": 6,
+            "nom": "Martin",
+            "prénom": "Diane",
+            "naissance": "2 decembre 1965",
+            "sexe": "F"
+        },
+        {
+            "dossier": 7,
+            "nom": "Lacroix",
+            "prénom": "Pauline",
+            "naissance": "25 janvier 1956",
+            "sexe": "F"
+        },
+        {
+            "dossier": 8,
+            "nom": "St-Jean",
+            "prénom": "Arthur",
+            "naissance": "7 octobre 1912",
+            "sexe": "M"
+        },
+        {
+            "dossier": 9,
+            "nom": "Béchard",
+            "prénom": "Marc",
+            "naissance": "8 aout 1980",
+            "sexe": "M"
+        },
+        {
+            "dossier": 10,
+            "nom": "Chartrand",
+            "prénom": "Mario",
+            "naissance": "23 juillet 1947",
+            "sexe": "M"
+        }
+    ],
+    "hospitalisation": [
+        {
+            "code_établissement": 1234,
+            "no_dossier_patient": 5,
+            "date_admission": "14-aout-00",
+            "date_sortie": "14-aout-01",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 1234,
+            "no_dossier_patient": 10,
+            "date_admission": "12-dec-92",
+            "date_sortie": "12-déc.-92",
+            "spécialité": "chirurgie"
+        },
+        {
+            "code_établissement": 2346,
+            "no_dossier_patient": 8,
+            "date_admission": "03-mars-03",
+            "date_sortie": "05-mars-03",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 2346,
+            "no_dossier_patient": 1,
+            "date_admission": "11-nov.-97",
+            "date_sortie": "12-nov.-97",
+            "spécialité": "orthopédie"
+        },
+        {
+            "code_établissement": 2346,
+            "no_dossier_patient": 3,
+            "date_admission": "12-avr.-95",
+            "date_sortie": "30-avr-95",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 3980,
+            "no_dossier_patient": 5,
+            "date_admission": "14-févr.-00",
+            "date_sortie": "14-mars-00",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 3980,
+            "no_dossier_patient": 5,
+            "date_admission": "01-janv.-01",
+            "date_sortie": "01-févr.-01",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 3980,
+            "no_dossier_patient": 9,
+            "date_admission": "03-avr.-95",
+            "date_sortie": "08-avr.-95",
+            "spécialité": "orthopédie"
+        },
+        {
+            "code_établissement": 3980,
+            "no_dossier_patient": 7,
+            "date_admission": "27-nov.-99",
+            "date_sortie": "04-déc.-99",
+            "spécialité": "chirurgie"
+        },
+        {
+            "code_établissement": 3980,
+            "no_dossier_patient": 10,
+            "date_admission": "28-avr.-97",
+            "date_sortie": "05-mai-97",
+            "spécialité": "chirurgie"
+        },
+        {
+            "code_établissement": 4177,
+            "no_dossier_patient": 3,
+            "date_admission": "03-aout-01",
+            "date_sortie": "05-déc.-01",
+            "spécialité": "médecine"
+        },
+        {
+            "code_établissement": 4177,
+            "no_dossier_patient": 3,
+            "date_admission": "02-févr.-02",
+            "date_sortie": "23-févr-02",
+            "spécialité": "orthopédie"
+        },
+        {
+            "code_établissement": 7306,
+            "no_dossier_patient": 2,
+            "date_admission": "23-mai-98",
+            "date_sortie": "27-mai-98",
+            "spécialité": "orthopédie"
+        }
     ]
-
 }

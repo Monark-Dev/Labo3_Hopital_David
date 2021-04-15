@@ -28,7 +28,7 @@ let listerPatients = (listePatients) => {
 let listerHospitalisation = (listeHospitalisation) => {
     let rep2=" "
     let repFin2= "</table>"
-    let rep3=`"
+    let rep3=`
     
     <table class=table table-striped>
     <tr  class="bg-info">
