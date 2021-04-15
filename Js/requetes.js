@@ -72,7 +72,7 @@ let chargerHospiFETCH = () => {
         }
         
         reponse.json().then((hopitaux) => {
-            listerHospi();
+            listerHospi(hopitaux);
         });
         }
     )

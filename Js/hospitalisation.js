@@ -1,7 +1,7 @@
 let listerPatients = (listePatients) => {
-    let rep= " "
-    let repFin= "</table>"
-    let rep1=`"
+    let rep = " "
+    let repFin = "</table>"
+    let rep1 = `"
 
   <table class=table table-striped>
   <tr  class="bg-info">
@@ -12,23 +12,23 @@ let listerPatients = (listePatients) => {
          <th>Date naissance</th>
          <th>Sexe</th>
     </tr> `;
-    for(let unPatient of listePatients){
+    for (let unPatient of listePatients) {
 
 
-  rep+=`
+        rep += `
   <tr><td>${unPatient.dossier}</td><td>${unPatient.nom}</td><td>${unPatient.prénom}</td><td>${unPatient.naissance}</td><td>${unPatient.sexe}</td></tr>
 `;
-  
+
     }
-    $('#contenu').html(rep1+rep+repFin);
+    $('#contenu').html(rep1 + rep + repFin);
 
 
 
 }
 let listerHospitalisation = (listeHospitalisation) => {
-    let rep2=" "
-    let repFin2= "</table>"
-    let rep3=`
+    let rep2 = " "
+    let repFin2 = "</table>"
+    let rep3 = `
     
     <table class=table table-striped>
     <tr  class="bg-info">
@@ -39,46 +39,49 @@ let listerHospitalisation = (listeHospitalisation) => {
               <th>Date sortie</th>
               <th>Spécialité</th>
     </tr>`
-    for(let unhospitalisation of listeHospitalisation){
-        rep2+=`
+    for (let unhospitalisation of listeHospitalisation) {
+        rep2 += `
         <tr><td> ${unhospitalisation.code_établissement}</td><td>${unhospitalisation.no_dossier_patient}</td><td>${unhospitalisation.date_admission}</td><td>${unhospitalisation.date_sortie}</td><td>${unhospitalisation.spécialité}</td></tr>
         `;
     }
 
 
 
-    $('#contenu').html(rep3 + rep2 + repFin2 );
-   
+    $('#contenu').html(rep3 + rep2 + repFin2);
+
 }
 
 
 
 
 let listerHospi = (listeHospi) => {
-    let repHosp=" "
-    let repFinHosp= "</table>"
+    let repHosp = " "
+    let repFinHosp = "</table>"
     let select;
-    let repHosp1=`"
+   let repHosp1 = `"
+
+    // <label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label><select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);"><option>Choisissez un patient</option>
     
-    
-    <table class=table table-striped>
-    <tr  class="bg-info">
-         <tr>
-              <th>Code Établissement</th>
-              <th>No dossier patient</th>
-              <th>Date admission</th>
-              <th>Date sortie</th>
-              <th>Spécialité</th>
-    </tr>`
-    for(let unhospatient of listeHospi){
-        repHosp+=`
+    // <table class=table table-striped>
+    // <tr  class="bg-info">
+    //      <tr>
+    //           <th>CodeXXX Établissement</th>
+    //           <th>No dossier patient</th>
+    //           <th>Date admission</th>
+    //           <th>Date sortie</th>
+    //           <th>Spécialité</th>
+    // </tr>`
+    for (let unhospatient of listeHospi.patient) {
+        repHosp += `
         <tr><td> ${unhospatient.code_établissement}</td><td>${unhospatient.no_dossier_patient}</td><td>${unhospatient.date_admission}</td><td>${unhospatient.date_sortie}</td><td>${unhospatient.spécialité}</td></tr>
         `;
     }
-    
 
 
-    $('#contenu').html(repHosp1 + repHosp + repFinHosp + select );
-   
+
+
+
+    $('#contenu').html(repHosp + repFinHosp + select);
+
 }
 
