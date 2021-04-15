@@ -1,0 +1,26 @@
+
+body{
+
+   background-image: url(docteur.jpg) ;
+
+}
+
+
+
+
+h1{
+text-align: center;
+    
+}
+
+div{
+	/*Important!*/
+   box-sizing: border-box;
+}   
+
+.material-icons.md-18 { font-size: 18px; }
+
+
+th{
+   color: blue;
+}
