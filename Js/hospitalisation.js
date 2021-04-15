@@ -6,7 +6,7 @@ let listerPatients = (listePatients) => {
   <table class=table table-striped>
   <tr  class="bg-info">
     <tr>
-         <th>Dossier</th>
+         <th>Dossssier</th>
          <th>Nom</th>
          <th>Prénom</th>
          <th>Date naissance</th>
