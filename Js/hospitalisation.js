@@ -1,3 +1,5 @@
+let fichierJson;
+
 let listerPatients = (listePatients) => {
     let rep = " "
     let repFin = "</table>"
@@ -55,6 +57,7 @@ let listerHospitalisation = (listeHospitalisation) => {
 
 
 let listerHospi = (listeHospi) => {
+    fichierJson = listeHospi;
     let affichagePatient = " "
     let fermetureTableau = "</table>"
     let affichageSelect = `<label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
@@ -64,6 +67,7 @@ let listerHospi = (listeHospi) => {
         affichageSelect += `<option value="${unhospatient.dossier}">${unhospatient.dossier}: ${unhospatient.nom}, ${unhospatient.prenom}</option>
         `
     }
+
 
     let affichageTableau = `
 
@@ -87,3 +91,42 @@ let listerHospi = (listeHospi) => {
 
 }
 
+let afficherHospitalisationsPourCePatient = (thisDuSelect) => {
+
+    let compteur = 0;
+    let fermetureTableau = "</table>"
+    let numero = parseInt(thisDuSelect.options[thisDuSelect.selectedIndex].value);
+    let tableauDesHospitalisationDuPatient;
+    let phrase = ""
+    let titreDuTableauParPatient = `
+    
+    <table class=table table-striped>
+    <tr  class="bg-info">
+         <tr>
+              <th>Code Établissement</th>
+              <th>No dossier patient</th>
+              <th>Date admission</th>
+              <th>Date sortie</th>
+              <th>Spécialité</th>
+    </tr>`
+
+    for (let patient of fichierJson.patient) {
+        if (numero == patient.dossier) {
+            phrase = `${patient.prenom} ${patient.nom}`
+        }
+    }
+
+
+    for (let unhospitalisation of fichierJson.hospitalisation) {
+        if (numero == unhospitalisation.no_dossier_patient) {
+
+            tableauDesHospitalisationDuPatient += `<tr><td> ${unhospitalisation.code_établissement}</td><td>${unhospitalisation.no_dossier_patient}</td><td>${unhospitalisation.date_admission}</td><td>${unhospitalisation.date_sortie}</td><td>${unhospitalisation.spécialité}</td></tr>`;
+
+            compteur++
+        }
+
+    }
+    phrase += ` a visité   ${compteur}  fois l'hopital`;
+    $('#contenu').html(phrase + titreDuTableauParPatient + tableauDesHospitalisationDuPatient + fermetureTableau);
+
+}
