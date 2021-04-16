@@ -60,8 +60,8 @@ let listerHospi = (listeHospi) => {
     let affichageSelect = `<label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
     <select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);">
     <option>Choisissez un patient</option>`;
-    for(let unhospatient of listeHospi.patient) {
-        affichageSelect+=`<option value="${unhospatient.dossier}">${unhospatient.dossier}: ${unhospatient.nom}, ${unhospatient.prenom}</option>
+    for (let unhospatient of listeHospi.patient) {
+        affichageSelect += `<option value="${unhospatient.dossier}">${unhospatient.dossier}: ${unhospatient.nom}, ${unhospatient.prenom}</option>
         `
     }
 
