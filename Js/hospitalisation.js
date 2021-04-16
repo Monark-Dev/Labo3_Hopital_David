@@ -1,12 +1,12 @@
 let listerPatients = (listePatients) => {
     let rep = " "
     let repFin = "</table>"
-    let rep1 = `"
+    let rep1 = `
 
   <table class=table table-striped>
   <tr  class="bg-info">
     <tr>
-         <th>Dossssier</th>
+         <th>Dossier</th>
          <th>Nom</th>
          <th>Prénom</th>
          <th>Date naissance</th>
@@ -55,33 +55,22 @@ let listerHospitalisation = (listeHospitalisation) => {
 
 
 let listerHospi = (listeHospi) => {
-    let repHosp = " "
-    let repFinHosp = "</table>"
-    let select;
-   let repHosp1 = `"
+    let affichagePatient = " "
+    let fermetureTableau = "</table>"
+    let affichageSelect ="";
+    let affichageTableau = `
 
-    // <label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label><select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);"><option>Choisissez un patient</option>
-    
-    // <table class=table table-striped>
-    // <tr  class="bg-info">
-    //      <tr>
-    //           <th>CodeXXX Établissement</th>
-    //           <th>No dossier patient</th>
-    //           <th>Date admission</th>
-    //           <th>Date sortie</th>
-    //           <th>Spécialité</th>
-    // </tr>`
+   <label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
+        <select id="selectPourAfficherParPatientname="selectPourAfficherParPatient" class="form-select " onchange="afficherHospitalisationsPourCePatient(this);">
+            <option>Choisissez un patient</option>`
     for (let unhospatient of listeHospi.patient) {
-        repHosp += `
+        affichagePatient += `
         <tr><td> ${unhospatient.code_établissement}</td><td>${unhospatient.no_dossier_patient}</td><td>${unhospatient.date_admission}</td><td>${unhospatient.date_sortie}</td><td>${unhospatient.spécialité}</td></tr>
         `;
     }
 
 
-
-
-
-    $('#contenu').html(repHosp + repFinHosp + select);
+    $('#contenu').html(affichageSelect + affichageTableau + affichagePatient + fermetureTableau);
 
 }
 
