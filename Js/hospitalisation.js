@@ -1,7 +1,7 @@
 let listerPatients = (listePatients) => {
     let rep = " "
     let repFin = "</table>"
-    let rep1 = `"
+    let rep1 = `
 
   <table class=table table-striped>
   <tr  class="bg-info">
@@ -55,33 +55,35 @@ let listerHospitalisation = (listeHospitalisation) => {
 
 
 let listerHospi = (listeHospi) => {
-    let repHosp = " "
-    let repFinHosp = "</table>"
-    let select;
-   let repHosp1 = `"
+    let affichagePatient = " "
+    let fermetureTableau = "</table>"
+    let affichageSelect = `<label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
+    <select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);">
+    <option>Choisissez un patient</option>`;
+    for(let unhospatient of listeHospi.patient) {
+        affichageSelect+=`<option value="${unhospatient.dossier}">${unhospatient.dossier}: ${unhospatient.nom}, ${unhospatient.prenom}</option>
+        `
+    }
 
-    // <label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label><select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);"><option>Choisissez un patient</option>
-    
-    // <table class=table table-striped>
-    // <tr  class="bg-info">
-    //      <tr>
-    //           <th>CodeXXX Établissement</th>
-    //           <th>No dossier patient</th>
-    //           <th>Date admission</th>
-    //           <th>Date sortie</th>
-    //           <th>Spécialité</th>
-    // </tr>`
+    let affichageTableau = `
+
+        <table class=table table-striped>
+          <tr  class="bg-info">
+          <tr>
+               <th>CodeXXX Établissement</th>
+               <th>No dossier patient</th>
+               <th>Date admission</th>
+               <th>Date sortie</th>
+               <th>Spécialité</th>
+        </tr>`
     for (let unhospatient of listeHospi.patient) {
-        repHosp += `
+        affichagePatient += `
         <tr><td> ${unhospatient.code_établissement}</td><td>${unhospatient.no_dossier_patient}</td><td>${unhospatient.date_admission}</td><td>${unhospatient.date_sortie}</td><td>${unhospatient.spécialité}</td></tr>
         `;
     }
 
 
-
-
-
-    $('#contenu').html(repHosp + repFinHosp + select);
+    $('#contenu').html(affichageSelect + affichageTableau + affichagePatient + fermetureTableau);
 
 }
 
