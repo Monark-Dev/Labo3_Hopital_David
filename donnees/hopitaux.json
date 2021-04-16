@@ -3,70 +3,70 @@
         {
             "dossier": 1,
             "nom": "Léger",
-            "prénom": "Emile",
+            "prenom": "Emile",
             "naissance": "26 mars 1917",
             "sexe": "M"
         },
         {
             "dossier": 2,
             "nom": "Bernard",
-            "prénom": "Marie",
+            "prenom": "Marie",
             "naissance": "3 février 1946",
             "sexe": "F"
         },
         {
             "dossier": 3,
             "nom": "Chartrand",
-            "prénom": "Guy",
+            "prenom": "Guy",
             "naissance": "5 avril 1959 ",
             "sexe": "M"
         },
         {
             "dossier": 4,
             "nom": "Coté",
-            "prénom": "André",
+            "prenom": "André",
             "naissance": "2 septembre 1978",
             "sexe": "M"
         },
         {
             "dossier": 5,
             "nom": "Lavoie",
-            "prénom": "Carole",
+            "prenom": "Carole",
             "naissance": "4 novembre 1973",
             "sexe": "F"
         },
         {
             "dossier": 6,
             "nom": "Martin",
-            "prénom": "Diane",
+            "prenom": "Diane",
             "naissance": "2 decembre 1965",
             "sexe": "F"
         },
         {
             "dossier": 7,
             "nom": "Lacroix",
-            "prénom": "Pauline",
+            "prenom": "Pauline",
             "naissance": "25 janvier 1956",
             "sexe": "F"
         },
         {
             "dossier": 8,
             "nom": "St-Jean",
-            "prénom": "Arthur",
+            "prenom": "Arthur",
             "naissance": "7 octobre 1912",
             "sexe": "M"
         },
         {
             "dossier": 9,
             "nom": "Béchard",
-            "prénom": "Marc",
+            "prenom": "Marc",
             "naissance": "8 aout 1980",
             "sexe": "M"
         },
         {
             "dossier": 10,
             "nom": "Chartrand",
-            "prénom": "Mario",
+            "prenom": "Mario",
             "naissance": "23 juillet 1947",
             "sexe": "M"
         }
