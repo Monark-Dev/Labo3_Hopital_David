@@ -57,12 +57,25 @@ let listerHospitalisation = (listeHospitalisation) => {
 let listerHospi = (listeHospi) => {
     let affichagePatient = " "
     let fermetureTableau = "</table>"
-    let affichageSelect ="";
+    let affichageSelect = `<label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
+    <select name="selectPourAfficherParPatient" class="form-select id="selectPourAfficherParPatient" onchange="afficherHospitalisationsPourCePatient(this);">
+    <option>Choisissez un patient</option>`;
+    for(let unhospatient of listeHospi.patient) {
+        affichageSelect+=`<option value="${unhospatient.dossier}">${unhospatient.dossier}: ${unhospatient.nom}, ${unhospatient.prenom}</option>
+        `
+    }
+
     let affichageTableau = `
 
-   <label id="select" mb-3" for="selectPourAfficherParPatient"> Pour vivre la puissance du "select" ... </label>
-        <select id="selectPourAfficherParPatientname="selectPourAfficherParPatient" class="form-select " onchange="afficherHospitalisationsPourCePatient(this);">
-            <option>Choisissez un patient</option>`
+        <table class=table table-striped>
+          <tr  class="bg-info">
+          <tr>
+               <th>CodeXXX Établissement</th>
+               <th>No dossier patient</th>
+               <th>Date admission</th>
+               <th>Date sortie</th>
+               <th>Spécialité</th>
+        </tr>`
     for (let unhospatient of listeHospi.patient) {
         affichagePatient += `
         <tr><td> ${unhospatient.code_établissement}</td><td>${unhospatient.no_dossier_patient}</td><td>${unhospatient.date_admission}</td><td>${unhospatient.date_sortie}</td><td>${unhospatient.spécialité}</td></tr>
